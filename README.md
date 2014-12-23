@@ -5,6 +5,7 @@ This helper class provides a way to custom sort of a list of sObject records by 
 
 ## Example
 
+```
 // List of sObject records. Example using Opportunities
 List<Opportunity> opps = [Select Id, Name, CloseDate, StageName, Amount From Opportunity];
 
@@ -26,4 +27,4 @@ for (SObjectSort obj :recordsForSorting)
 
 // List is now sorted by name ascending
 system.debug('### SORTED LIST: ' + opps);
-
+```
