@@ -1,5 +1,5 @@
 // Custom wrapper class for sorting activities
-global class ObjectWrapper implements Comparable
+global class SObjectSort implements Comparable
 {
 	public sObject 	record;
 	public String   sortField;
@@ -7,7 +7,7 @@ global class ObjectWrapper implements Comparable
 	public String 	sortValue;
 
 	// Constructor
-	global ObjectWrapper(sObject r, String sField, String sDirection)
+	global SObjectSort(sObject r, String sField, String sDirection)
 	{
 		record 			= r;
 		sortField 		= sField;
@@ -18,7 +18,7 @@ global class ObjectWrapper implements Comparable
 	// Custom compare method. Sorts records based on the direction.
 	global Integer compareTo(Object compareTo)
 	{
-		ObjectWrapper compareToObject = (ObjectWrapper)compareTo;
+		SObjectSort compareToObject = (SObjectSort)compareTo;
 
 		Integer returnValue;
 
