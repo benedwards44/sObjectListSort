@@ -28,3 +28,23 @@ for (SObjectSort obj :recordsForSorting)
 // List is now sorted by name ascending
 system.debug('### SORTED LIST: ' + opps);
 ```
+You can change the sort method by changing the field and order (supports strings, dates, numbers, currencies).
+```
+recordsForSorting = new List<SObjectSort>();
+for (Opportunity opp :opps)
+{
+  // Add opportunities to wrapper class. Set "Name" and "asc" as field and sort order
+  recordsForSorting.add(new SObjectSort(opp, 'Amount', 'desc'));
+}
+
+// Sort the list based on details from above
+recordsForSorting.sort();
+
+opps = new List<Opportunity>();
+for (SObjectSort obj :recordsForSorting)
+{
+  opps.add((Opportunity)obj.record);
+}
+
+// List is now sorted by name ascending
+system.debug('### SORTED LIST: ' + opps);
