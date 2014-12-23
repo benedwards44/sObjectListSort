@@ -48,3 +48,4 @@ for (SObjectSort obj :recordsForSorting)
 
 // List is now sorted by name ascending
 system.debug('### SORTED LIST: ' + opps);
+```
