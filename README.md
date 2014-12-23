@@ -3,7 +3,7 @@ sObjectListSort
 
 This utility class provides a way to custom sort of a list of sObject records by specifying the field name and the sort direction. Useful in circumstances where you can't create the order you want using a SOQL query or don't want to re-query records each time a sort is required.
 
-## Example
+## Usage
 
 ```
 // Sort a list of Opportunities by Amount descending
