@@ -1,4 +1,3 @@
-// Custom wrapper class for sorting activities
 global class SObjectListSort
 {
 
